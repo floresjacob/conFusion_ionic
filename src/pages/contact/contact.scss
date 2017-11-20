@@ -1,0 +1,15 @@
+page-contact {
+  ion-item {
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  ion-card {
+    position: relative;
+    text-align: left;
+
+    ion-title{
+      color: primary;
+    }
+  }
+}
