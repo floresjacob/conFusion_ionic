@@ -33,9 +33,8 @@ import { DishProvider } from '../dish/dish';
     }
 
     getFavorites(): Observable<Dish[]> {
-    return this.dishservice.getDishes()
-      .map(dishes => dishes.filter(dish => this.favorites.some(el => el === dish.id)));
-  }
+    return this.dishservice.getDishes().map(dishes => dishes.filter(dish => this.favorites.some(a => a === dish.id)));
+    }
 
     deleteFavorite(id: number): Observable<Dish[]> {
     let index = this.favorites.indexOf(id);
