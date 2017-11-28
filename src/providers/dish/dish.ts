@@ -34,7 +34,6 @@ export class DishProvider {
     return this.http.get(baseURL + 'dishes')
       .map(res => {return this.processHttpmsgService.extractData(res);})
       .catch(error => {return this.processHttpmsgService.handleError(error);});
-
   }
 
 
@@ -44,15 +43,9 @@ export class DishProvider {
     return this.http.get(baseURL + 'dishes/' + id)
     .map(res => {return this.processHttpmsgService.extractData(res);})
     .catch(error => {return this.processHttpmsgService.handleError(error);});
-
-
-
-
   }
 
   getFeaturedDish():Observable<Dish>{
-
-
     return this.http.get(baseURL + 'dishes?featured=true')
     .map(res => {return this.processHttpmsgService.extractData(res)[0];})
     .catch(error => {return this.processHttpmsgService.handleError(error);});
